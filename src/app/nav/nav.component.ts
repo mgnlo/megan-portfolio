@@ -80,8 +80,8 @@ export class NavComponent implements OnInit {
     $('.menu-items').toggleClass('open');
   }
 
-  dropdownToggle(dt: boolean): boolean {
-    /*true=open; false=close*/
-    return dt = (dt) ? false : true;
+  isMobile(): boolean {
+    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    return width < 768;
   }
 }

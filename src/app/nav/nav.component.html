@@ -7,10 +7,22 @@
   <ul class="menu-items" (click)="toggle()">
     <div class="fixToCenter">
       <ng-container *ngFor=" let navLink of navLinks">
-        <li *ngIf="navLink.hasChildPage;" (mouseenter)="dropdown=true" (mouseleave)="dropdown=false">
-          <a class="menu-item dropdown" (click)="toggle(); dropdown = dropdownToggle(dropdown)">
+        <li *ngIf="navLink.hasChildPage && !isMobile();" (mouseenter)="dropdown=true" (mouseleave)="dropdown=false">
+          <a class="menu-item dropdown" (click)="toggle(); dropdown = !dropdown;">
             {{navLink.egName}}
           </a>
+          <ng-container *ngIf="dropdown">
+            <ul *ngFor="let port of portfolio; let i = index;">
+              <li routerLinkActive="active">
+                <a class="menu-item" routerLink={{port.url}}>{{port.egName}}</a>
+              </li>
+              <div class="dropdown-divider" *ngIf="i < portfolio.length-1"></div>
+            </ul>
+          </ng-container>
+          <ng-container *ngIf="!dropdown"></ng-container>
+        </li>
+        <li *ngIf="navLink.hasChildPage && isMobile();" (click)="toggle(); dropdown = !dropdown;">
+          <a class="menu-item dropdown">{{navLink.egName}}</a>
           <ng-container *ngIf="dropdown">
             <ul *ngFor="let port of portfolio; let i = index;">
               <li routerLinkActive="active">

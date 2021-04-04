@@ -84,7 +84,7 @@ body {
     .description{
       width: 90vw;
       height: 250px;
-      margin: 7vh 5vw 3vh;
+      margin: 7vh 5vw;
       p{
         font-size: 16px;
       }
@@ -97,5 +97,6 @@ body {
     width: 115px;
     height: 40px;
     right: 36px;
+    line-height: 30px;
   }
 }

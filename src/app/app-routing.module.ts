@@ -11,17 +11,17 @@ import { RwdWebsiteComponent } from './rwd-website/rwd-website.component';
 import { PsPhotoComponent } from './ps-photo/ps-photo.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'photography', component: PhotographyComponent},
-  {path: 'drawing', component: DrawingComponent},
-  {path: 'mockup', component: MockupComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'rwd-website', component: RwdWebsiteComponent},
-  {path: 'ps-photo', component: PsPhotoComponent}
+  {path: '', component: HomeComponent, runGuardsAndResolvers: 'always'},
+  {path: 'photography', component: PhotographyComponent, runGuardsAndResolvers: 'always'},
+  {path: 'drawing', component: DrawingComponent, runGuardsAndResolvers: 'always'},
+  {path: 'mockup', component: MockupComponent, runGuardsAndResolvers: 'always'},
+  {path: 'about', component: AboutComponent, runGuardsAndResolvers: 'always'},
+  {path: 'rwd-website', component: RwdWebsiteComponent, runGuardsAndResolvers: 'always'},
+  {path: 'ps-photo', component: PsPhotoComponent, runGuardsAndResolvers: 'always'}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
