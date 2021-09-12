@@ -74,7 +74,7 @@
     }
 
     p{
-      margin-top: 2em;
+      margin-top: 20px;
       width: 70vw;
       align-self: center;
       font-size: 16px;
@@ -83,7 +83,7 @@
     }
 
     footer{
-      padding-top: 2em;
+      padding-top: 20px;
     }
 
     .btn{
@@ -96,7 +96,7 @@
       font-family: $font-third;
       cursor: pointer;
       @include justify-content(center);
-      margin-top: 2em;
+      margin-top: 20px;
     }
   }
 }
@@ -108,13 +108,13 @@
     font-family: $font-third;
   }
   p {
-    margin: 1em 0;
+    margin: 10px 0;
     font-family: $font-sec;
     font-size: 14px;
   }
   .grid p{
     text-align: center;
-    margin-top: 2em;
+    margin-top: 20px;
   }
   .about{
     width:33vw;
@@ -136,12 +136,12 @@
     margin-bottom: 3vh;
     img {
       max-width: 20vw;
-      max-height: 5em;
+      max-height: 50vh;
       height: auto;
       @include inline-flex;
-      margin: 2em;
+      margin: 20px;
       &#gsap, &#chartjs, &#jquery, &#bootstrap, &#angular {
-        max-height: 8em;
+        max-height: 8vh;
         max-width: 8vw;
       }
     }
@@ -162,8 +162,8 @@
       font-family: $font-third;
     }
     p {
-      margin-top: 5em;
-      font-size: 2em;
+      margin-top: 50px;
+      font-size: 20px;
       width: 100vw;
       font-family: $font-ch-morebold;
     }
@@ -185,7 +185,7 @@
         max-height: 5vh;
         height: auto;
         @include inline-flex;
-        margin: 1.3em 0.5em;
+        margin: 13px 5px;
         &#gsap, &#chartjs, &#jquery, &#bootstrap, &#angular {
           max-width: 20vw;
           max-height: 8vh;
@@ -194,12 +194,12 @@
     }
   }
   .socialLink {
-    margin: 2em;
+    margin: 20px;
     a {
       width: 60px;
       height: 30vh;
-      font-size: 2.4em;
-      padding: 3em;
+      font-size: 24px;
+      padding: 30px;
 
       :nth-child(1) {
         color: $color-third;

@@ -1,0 +1,515 @@
+@font-face {
+  font-family: "GenJyuuGothic";
+  font-style: normal;
+  src: url("../../assets/font/GenJyuuGothic-Monospace-Normal.ttf") format("truetype"), url("../../assets/font/GenJyuuGothic-Monospace-Normal.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "GenJyuuGothicBold";
+  font-style: normal;
+  src: url("../../assets/font/Gen-Jyuu-Gothic-Bold.ttf") format("truetype"), url("../../assets/font/Gen-Jyuu-Gothic-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "GenJyuuGothicHeavy";
+  font-style: normal;
+  src: url("../../assets/font/Gen-Jyuu-Gothic-Heavy.ttf") format("truetype"), url("../../assets/font/Gen-Jyuu-Gothic-Heavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Lobster";
+  font-style: normal;
+  src: url("../../assets/font/Lobster-Regular.ttf") format("truetype"), url("../../assets/font/Lobster-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "FiraSansExtraCondensed";
+  font-style: normal;
+  src: url("../../assets/font/FiraSansExtraCondensed-SemiBoldItalic.ttf") format("truetype"), url("../../assets/font/FiraSansExtraCondensed-SemiBoldItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/font/Karla-Medium.ttf") format("truetype"), url("../../assets/font/Karla-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../assets/font/Ubuntu-BoldItalic.ttf") format("truetype"), url("../../assets/font/Ubuntu-BoldItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "NotoSansTC";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../assets/font/NotoSansTC-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  font-style: normal;
+  src: url("../../assets/font/BebasNeue-Regular.ttf") format("truetype"), url("../../assets/font/BebasNeue-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../../assets/font/Lato-Italic.ttf") format("truetype"), url("../../assets/font/Lato-Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "AvenirNextCondBoldItalic";
+  font-style: normal;
+  src: url("../../assets/font/SourceSansPro-BoldItalic.ttf") format("truetype");
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #182320;
+  color: white;
+  overflow: hidden;
+}
+
+.hero {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  padding: 50px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.scene1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: fixed;
+  z-index: -2;
+  height: 100vh;
+}
+
+.scene2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: fixed;
+  top: 100;
+  z-index: -1;
+  height: 100vh;
+}
+
+.imgTitle {
+  font-size: 100px;
+  position: fixed;
+  text-align: center;
+  color: white;
+  font-family: BebasNeue, GenJyuuGothic;
+  font-weight: 900;
+}
+
+.text {
+  margin: 100px 50px;
+}
+
+.text p {
+  font-size: 25px;
+  font-family: Karla, GenJyuuGothic;
+  margin: 20px 0;
+}
+
+.ani-1 .layer-0 {
+  background-image: url("../../assets/images/cave0.png");
+  height: 100vh;
+  background-position: bottom left;
+}
+
+.ani-1 .layer-1 {
+  background-image: url("../../assets/images/cave1.png");
+  height: 100vh;
+  background-position: bottom left;
+}
+
+.ani-1 .layer-2 {
+  background-image: url("../../assets/images/cave2.png");
+  height: 100vh;
+  background-position: bottom left;
+}
+
+.ani-1 .layer-3 {
+  background-image: url("../../assets/images/cave3.png");
+  height: 100vh;
+  background-position: bottom left;
+}
+
+.ani-1 .layer-4 {
+  background-image: url("../../assets/images/cave4.png");
+  height: 100vh;
+  background-position: bottom left;
+}
+
+.ani-1 .layer-4 {
+  background-image: url("../../assets/images/cave4.png");
+  background-position: -150px;
+  height: 100vh;
+}
+
+.ani-1 .layer-5 {
+  background-image: url("../../assets/images/cave5.png");
+  height: 100vh;
+  background-position: bottom left;
+}
+
+.ani-1 .layer-6 {
+  background-image: url("../../assets/images/cave6.png");
+  height: 100vh;
+  background-position: bottom left;
+}
+
+.ani-1 .layer-6 {
+  background-image: url("../../assets/images/cave6.png");
+  background-position: -500px;
+  height: 100vh;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: none;
+  flex-wrap: nowrap;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 80vw;
+  margin: 100px auto;
+}
+
+.wrapper .pic > img {
+  height: 80vh;
+  margin: 80px 100px;
+}
+
+.bgs {
+  width: 85vw;
+  height: 100vh;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.bgs .delayed-section {
+  position: absolute;
+  overflow: hidden;
+}
+
+.bgs .delayed-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+.sketch-modal {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 80vw;
+  margin: 50px 10vw;
+}
+
+.sketch-modal .sketch:nth-child(1) {
+  border-radius: 10px;
+  height: 30vh;
+  width: 30vh;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  margin: 20px;
+}
+
+.sketch-modal .sketch:nth-child(1) {
+  background-size: contain;
+}
+
+.sketch-modal .sketch:nth-child(2) {
+  border-radius: 10px;
+  height: 30vh;
+  width: 30vh;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  margin: 20px;
+}
+
+.sketch-modal .sketch:nth-child(2) {
+  background-size: contain;
+}
+
+.sketch-modal .sketch:nth-child(3) {
+  border-radius: 10px;
+  height: 30vh;
+  width: 30vh;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  margin: 20px;
+}
+
+.sketch-modal .sketch:nth-child(3) {
+  background-size: contain;
+}
+
+.sketch-modal .sketch:nth-child(4) {
+  border-radius: 10px;
+  height: 30vh;
+  width: 30vh;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  margin: 20px;
+}
+
+.sketch-modal .sketch:nth-child(4) {
+  background-size: contain;
+}
+
+.sketch-modal .sketch:nth-child(5) {
+  border-radius: 10px;
+  height: 30vh;
+  width: 30vh;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  margin: 20px;
+}
+
+.sketch-modal .sketch:nth-child(5) {
+  background-size: contain;
+}
+
+.sketch-modal .sketch:nth-child(6) {
+  border-radius: 10px;
+  height: 30vh;
+  width: 30vh;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  margin: 20px;
+}
+
+.sketch-modal .sketch:nth-child(6) {
+  background-size: contain;
+}
+
+.sketch-modal .sketch:nth-child(7) {
+  border-radius: 10px;
+  height: 30vh;
+  width: 30vh;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  margin: 20px;
+}
+
+.sketch-modal .sketch:nth-child(7) {
+  background-size: contain;
+}
+
+.sketch-modal .sketch:nth-child(8) {
+  border-radius: 10px;
+  height: 30vh;
+  width: 30vh;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  margin: 20px;
+}
+
+.sketch-modal .sketch:nth-child(8) {
+  background-size: contain;
+}
+
+.sketch-modal .sketch:nth-child(9) {
+  border-radius: 10px;
+  height: 30vh;
+  width: 30vh;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  margin: 20px;
+}
+
+.sketch-modal .sketch:nth-child(9) {
+  background-size: contain;
+}
+
+.sketch-modal .sketch:nth-child(10) {
+  border-radius: 10px;
+  height: 30vh;
+  width: 30vh;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  margin: 20px;
+}
+
+.sketch-modal .sketch:nth-child(10) {
+  background-size: cover;
+}
+
+.sketch-modal .sketch:nth-child(11) {
+  border-radius: 10px;
+  height: 30vh;
+  width: 30vh;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  margin: 20px;
+}
+
+.sketch-modal .sketch:nth-child(11) {
+  background-size: cover;
+}
+
+.sketch-modal .sketch:nth-child(12) {
+  border-radius: 10px;
+  height: 30vh;
+  width: 30vh;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  margin: 20px;
+}
+
+.sketch-modal .sketch:nth-child(12) {
+  background-size: contain;
+}
+
+a2p-gallery {
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .imgTitle {
+    font-size: 45px;
+  }
+  .t1 {
+    display: none;
+  }
+  #hero1, #hero2 {
+    margin: 0;
+    padding: unset;
+  }
+  .layer {
+    height: 100vh;
+  }
+  .wrapper {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 58px auto;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 0;
+  }
+  .wrapper .pic, .wrapper .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .wrapper .pic {
+    width: 110vw;
+  }
+  .wrapper .pic img {
+    height: auto;
+    width: 100%;
+    margin: 0;
+  }
+  .text {
+    margin: 15vh 5vw;
+    z-index: 1;
+  }
+  .text p {
+    font-size: 17px;
+    margin: 10px 0;
+  }
+  .bgs {
+    width: 100vw;
+    height: 40vh;
+  }
+  .ani-1 .layer-4 {
+    background-position: -732px;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  .ani-1 .layer-6 {
+    background-position: -582px;
+  }
+}

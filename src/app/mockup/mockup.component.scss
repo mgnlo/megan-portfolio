@@ -14,14 +14,14 @@ body {
   @include flex-wrap(nowrap);
   .title {
     font-family: $font-forth;
-    font-size: 20rem;
+    font-size: 20px;
     text-align: left;
     color: $color-light-brown;
     @include flexbox;
     width: 30vw;
     height: 130vh;
-    margin-top: 14rem;
-    line-height: 24rem;
+    margin-top: 140px;
+    line-height: 240px;
     .mobileOnly{
       display: none;
     }
@@ -37,15 +37,15 @@ body {
     position: relative;
     height: 130vh;
     width: 100%;
-    margin-top: 5rem;
-    margin-left: -2rem;
+    margin-top: 50px;
+    margin-left: -20px;
     // align-content: space-between;
     // justify-content: space-between;
   }
 }
 .comb {
   @include inline-flex;
-  margin-top: -1rem;
+  margin-top: -10px;
   z-index: 1;
   .inner {
     cursor: pointer;
@@ -67,8 +67,8 @@ body {
     .wrapper {
       overflow: hidden;
       bottom: 0;
-      top: 20rem;
-      left: -20rem;
+      top: 200px;
+      left: -200px;
       right: 0;
       width: $hexSize;
       height: $hexSize;
@@ -173,7 +173,7 @@ body {
         transform: translate(0%, 0%);
         background-color: $color-hover-brown2/*$color-trans-sec*/;
         .text {
-          font-size: 2rem;
+          font-size: 20px;
           font-family: $font-sec;
           width: 150px;
           text-align: center;
@@ -235,7 +235,7 @@ body {
     z-index: 4;
     .img{
       height: 75vh;
-      margin-top: 4rem;
+      margin-top: 40px;
       display: none;
       &.active {
         display: inline-block;
