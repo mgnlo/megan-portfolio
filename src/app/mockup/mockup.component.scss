@@ -14,7 +14,7 @@ body {
   @include flex-wrap(nowrap);
   .title {
     font-family: $font-forth;
-    font-size: 20px;
+    font-size: 200px;
     text-align: left;
     color: $color-light-brown;
     @include flexbox;
