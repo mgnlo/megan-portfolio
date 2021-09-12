@@ -277,7 +277,7 @@
     display: none;
   }
   .section-sec .madeBy img {
-    max-width: 200px;
+    max-width: 20vw;
     max-height: 5vh;
     height: auto;
     display: -webkit-inline-box;
