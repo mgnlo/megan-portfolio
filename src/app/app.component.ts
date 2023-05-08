@@ -1,12 +1,14 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { LoadingService } from './shared/service/loading.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent{
+export class AppComponent implements OnInit {
   title = 'megan-portfolio';
+  loading: boolean = false;
   onActivate($event: Event): void {
     const componentName = $event.constructor.name;
     const scrollToTop = window.setInterval(() => {
@@ -17,5 +19,14 @@ export class AppComponent{
             window.clearInterval(scrollToTop);
         }
     }, 16);
+  }
+
+  ngOnInit(){}
+
+  constructor(private loadingSvc: LoadingService){
+    // Loading 畫面處理
+    this.loadingSvc.loading$.subscribe(b => {
+      this.loading = b;
+    });
   }
 }

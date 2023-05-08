@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import * as $ from 'jquery';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import {Image} from 'angular2_photoswipe';
+import { LoadingService } from '../shared/service/loading.service';
 const mobileSize = 768;
 const pics: {width: number; height: number}[] = [
   {width: 1511, height: 2016},
@@ -41,8 +42,9 @@ export class DrawingComponent implements OnInit {
   counter = (i: number) => {
     return new Array(i);
   }
-  constructor() { }
+  constructor(private loadSvc: LoadingService) { }
   ngOnInit(): void {
+    this.loadSvc.startLoading();
     gsap.defaults({ease: 'none'});
     for (let i = 0; i <= this.layers; i++) {
       const range = 1 / this.layers;
@@ -224,5 +226,10 @@ export class DrawingComponent implements OnInit {
       tl4.fromTo($('.wrapper .text'), {autoAlpha: 0, y: '40%'}
       , {duration: 1, ease: 'circ.easeIn', autoAlpha: 1, y: yTop}, 2);
     }
+    this.loadSvc.stopLoading();
+  }
+
+  ngAfterViewInit() {
+    this.loadSvc.stopLoading();
   }
 }

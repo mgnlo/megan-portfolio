@@ -1,16 +1,18 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NavComponent } from '../../layout/nav/nav.component';
 import { RouterModule } from '@angular/router';
+import { LoadingComponent } from '../layout/loading/loading.component';
+import { NavComponent } from '../layout/nav/nav.component';
 
 const components = [
-  NavComponent
+  NavComponent,
+  LoadingComponent
 ];
 const modules = [
   CommonModule,
   ReactiveFormsModule,
-  RouterModule
+  RouterModule,
 ];
 
 @NgModule({

@@ -2,6 +2,7 @@ import { Component, OnInit, Injectable, AfterViewInit } from '@angular/core';
 import * as $ from 'jquery';
 import {gsap} from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { LoadingService } from '../shared/service/loading.service';
 const mobileSize = 768;
 function getHexItems(infos: {eng: string; ch: string; num: number; }[]): Array<{eng: string; ch: string; cover: string; img: string[]}> {
   let hexArr: Array<{eng: string; ch: string; cover: string; img: string[]}> = [];
@@ -75,12 +76,14 @@ const hexInfo: Array<{eng: string; ch: string; num: number}> = [
 })
 
 export class MockupComponent implements AfterViewInit, OnInit {
-  constructor() { }
+  constructor(private loadSvc: LoadingService) { }
   hexs = getHexItems(hexInfo);
   ngAfterViewInit(): void {
     orderHex(); // to orderHex() in route at first time
+    this.loadSvc.stopLoading();
   }
   ngOnInit(): void {
+    this.loadSvc.startLoading();
     gsap.registerPlugin(ScrollTrigger);
     const tl1 = gsap.timeline({});
     tl1.set($('.honeycombs-inner-wrapper'), { transformPerspective: 300, transformStyle: 'preserve-3d', y: '-1rem'});

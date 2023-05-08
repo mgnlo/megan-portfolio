@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import {gsap, TimelineMax, TweenMax} from 'gsap';
 import Draggable from 'gsap/Draggable';
+import { LoadingService } from '../shared/service/loading.service';
 
 const mobileSize = 768;
 let psArr: Array<{id: number;  before: string; after: string; }> = [];
@@ -52,9 +53,10 @@ export class PsPhotoComponent implements OnInit {
   nowPicId = 0;
   maxId = this.psArr.length - 1;
 
-  constructor() { }
+  constructor(private loadSvc: LoadingService) { }
 
   ngOnInit(): void {
+    this.loadSvc.startLoading();
     gsap.registerPlugin(Draggable);
     const browserSize = ( Number($(window).width()) > 600) ? 600 : Number($(window).width());
     const sliderWidth = ( screen.width <= mobileSize ) ? Number(screen.width) : browserSize;
@@ -143,5 +145,9 @@ export class PsPhotoComponent implements OnInit {
       $('.slider-bg-right').css('background-image', 'url(' + psArr[i + 1].after + ')');
       this.nowPicId = i + 1;
     }
+  }
+
+  ngAfterViewInit() {
+    this.loadSvc.stopLoading();
   }
 }

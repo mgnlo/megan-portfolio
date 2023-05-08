@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {gsap} from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import * as $ from 'jquery';
+import { LoadingService } from '../shared/service/loading.service';
 
 const mobileSize = 768;
 const getPosition = (elem: Element, target: Element) => {
@@ -112,12 +113,13 @@ photos.push(newTaipei);
 
 export class PhotographyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loadSvc: LoadingService) { }
   allPhoto = photos;
   covers = photos.map(a => a.cover);
   spots = photos.map(a => a.spot);
 
   ngOnInit(): void {
+    this.loadSvc.startLoading();
     $('html').css('overflow-x', 'hidden');
     const fromComp = ( screen.width >= mobileSize ) ? true : false;
     gsap.registerPlugin(ScrollTrigger);
@@ -149,6 +151,10 @@ export class PhotographyComponent implements OnInit {
         gallarySet.add({ small: vals[i], medium: vals[i], big: vals[i]});
       }
     }
+  }
+
+  ngAfterViewInit() {
+    this.loadSvc.stopLoading();
   }
 
   openModal(id: number): void{
