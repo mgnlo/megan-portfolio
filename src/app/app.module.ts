@@ -6,7 +6,6 @@ import {Angular2PhotoswipeModule} from 'angular2_photoswipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PhotographyComponent } from './photography/photography.component';
 import { DrawingComponent } from './drawing/drawing.component';
@@ -15,10 +14,10 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { RwdWebsiteComponent } from './rwd-website/rwd-website.component';
 import { PsPhotoComponent } from './ps-photo/ps-photo.component';
+import { ShareModule } from './shared/module/share/share.module';
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
     PhotographyComponent,
     DrawingComponent,
     MockupComponent,
@@ -32,7 +31,8 @@ import { PsPhotoComponent } from './ps-photo/ps-photo.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    Angular2PhotoswipeModule
+    Angular2PhotoswipeModule,
+    ShareModule,
   ],
   bootstrap: [AppComponent]
 })

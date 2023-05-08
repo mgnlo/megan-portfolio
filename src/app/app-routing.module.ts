@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { NavComponent } from './nav/nav.component';
 import { PhotographyComponent } from './photography/photography.component';
 import { DrawingComponent } from './drawing/drawing.component';
 import { MockupComponent } from './mockup/mockup.component';
