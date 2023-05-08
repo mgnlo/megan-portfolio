@@ -64,6 +64,7 @@ export class DrawingComponent implements OnInit {
     if ( screen.width <= mobileSize ) {
       for (let i = 0; i < $('.ani-1 .scene1').length; i++){
         const layer = $('.ani-1 .layer-' + i).get(0);
+        if(!layer){ break; }
         const depth = layer.dataset.depth;
         const xMove = -(layer.offsetWidth * Number(depth));
         // console.log('layer' + i + xMove);
@@ -92,6 +93,7 @@ export class DrawingComponent implements OnInit {
     } else {
       for (let i = 0; i < $('.ani-1 .scene1').length; i++){
         const layer = $('.ani-1 .layer-' + i).get(0);
+        if(!layer){ break; }
         const depth = layer.dataset.depth;
         const xMove = -(layer.offsetWidth * Number(depth));
         // console.log('layer' + i + xMove);

@@ -135,15 +135,11 @@
     @include align-items(center); //horizontal
     margin-bottom: 3vh;
     img {
-      max-width: 20vw;
-      max-height: 50vh;
-      height: auto;
+      width:  80px;
+      height: 80px;
+      object-fit: cover;
       @include inline-flex;
       margin: 20px;
-      &#gsap, &#chartjs, &#jquery, &#bootstrap, &#angular {
-        max-height: 8vh;
-        max-width: 8vw;
-      }
     }
   }
 }
@@ -181,15 +177,10 @@
     }
     .madeBy {
       img {
-        max-width: 20vw;
-        max-height: 5vh;
+        width: 30px;
         height: auto;
         @include inline-flex;
-        margin: 13px 5px;
-        &#gsap, &#chartjs, &#jquery, &#bootstrap, &#angular {
-          max-width: 20vw;
-          max-height: 8vh;
-        }
+        margin: 5px;
       }
     }
   }
